@@ -39,13 +39,13 @@ if [ -d "$home_dir/ros_catkin_ws/src/ros_001" ]; then
 fi
 
 # download and extract the ros_001 folder into the ros_catkin_ws/src
-echo "downloading ros_001 into $home_dir/ros_catkin_ws/src"
+echo "Downloading ros_001 into $home_dir/ros_catkin_ws/src"
 #tar -xvzf ros_001.tar.gz -C $home_dir/catkin_ws/src
 cd $home_dir/ros_catkin_ws/src
 git clone https://github.com/mina-sadek/ROS-dev2.git
 
-mv ./ros_catkin_ws/ros_001 ./ros_001
-rm -r ros_catkin_ws
+mv ./ROS-dev2/ros_catkin_ws/ros_001 ./ros_001
+rm -r ./ROS-dev2
 
 # Rebuild the workspace
 echo "rebuilding the ros_catkin_ws workspace"
