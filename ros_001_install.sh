@@ -20,11 +20,6 @@ else
   echo "ros_catkin_ws exists @ $home_dir/ros_catkin_ws"
 fi
 
-#2. move to the workspace
-#echo "Building catkin workspace ..."
-#cd $home_dir/ros_catkin_ws/src
-
-
 if [ -d "$home_dir/ros_catkin_ws/src/ros_001" ]; then
   echo "old ros_001 exists"
   echo "compressing old ros_001 for backup ..."
@@ -47,7 +42,10 @@ git clone https://github.com/mina-sadek/ROS-dev2.git
 mv ./ROS-dev2/ros_catkin_ws/ros_001 ./ros_001
 sudo rm -r ./ROS-dev2
 
-# Rebuild the workspace
+# Rebuild the python scripts
+chmod a+x ./ros_001/scripts/*.py
+
+# Rebuild the workspace, to build the C++ codes
 echo "rebuilding the ros_catkin_ws workspace"
 cd $home_dir/ros_catkin_ws
 catkin_make
