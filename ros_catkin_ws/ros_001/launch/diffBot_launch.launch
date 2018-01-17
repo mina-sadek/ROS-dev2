@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<launch>
+<!--
+  <node pkg="ros_001" type="blink_publisher" name="blink_publisher" />
+-->
+  <node pkg="ros_001" type="diffBot" name="diffBot" />
+  <node pkg="ros_001" type="diffBot_rwheel" name="diffBot_rwheel" />
+  <node pkg="ros_001" type="diffBot_lwheel" name="diffBot_lwheel" />
+
+  <node pkg="ros_001" type="diffBot_tf.py" name="diffBot_tf" />
+  <node pkg="ros_001" type="diffBot_teleop_keyboard.py" name="diffBot_teleop_keyboard" />
+</launch>
