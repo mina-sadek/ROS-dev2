@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
+<!-- use the following in ROS indigo and before -->
+<!--
 <package>
+-->
+<!-- use the following in ROS Kinetic and after -->
+<package format="2">
   <name>ros_001</name>
   <version>0.0.0</version>
   <description>The ros_001 package</description>
@@ -47,12 +52,28 @@
   <build_depend>message_generation</build_depend>
   <build_depend>tf</build_depend>
 
+  <!-- use the following in ROS indigo and before -->
+  <!--
   <run_depend>roscpp</run_depend>
   <run_depend>rospy</run_depend>
   <run_depend>std_msgs</run_depend>
   <run_depend>geometry_msgs</run_depend>
   <run_depend>message_runtime</run_depend>
   <run_depend>tf</run_depend>
+  -->
+  <!-- use the following in ROS Kinetic and after -->
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_export_depend>geometry_msgs</build_export_depend>
+  <build_export_depend>message_runtime</build_export_depend>
+  <build_export_depend>tf</build_export_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>tf</exec_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
