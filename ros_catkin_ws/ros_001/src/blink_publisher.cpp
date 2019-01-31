@@ -6,6 +6,7 @@
 #include <wiringPi.h>
 #define LED 18          // BCM
 //#define LED 1         // wiringpi
+#define STEP 50
 
 int main(int argc, char **argv) {
 	int bright;
@@ -33,7 +34,7 @@ int main(int argc, char **argv) {
 	ros::Rate rate(10);
 
 	while(ros::ok()) {
-		bright = (bright + 1) % 1024;
+		bright = (bright + STEP) % 1024;
 		pwmWrite(LED, bright);
 		delay(1);
 
