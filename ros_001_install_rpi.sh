@@ -32,7 +32,7 @@ chmod a+x ./ros_001/scripts/*.py
 # Rebuild the workspace, to build the C++ codes
 echo "rebuilding the ros_catkin_ws workspace"
 cd $home_dir/ros_catkin_ws
-catkin_make
+catkin_make -j2
 
 echo "Done installing ros_001 at location: $home_dir/ros_catkin_ws/src/ros_001"
 echo "===================================="
