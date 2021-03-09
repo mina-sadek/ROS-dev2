@@ -23,7 +23,7 @@ echo "Downloading ros_001 into $home_dir/ros_catkin_ws/src"
 cd $home_dir/ros_catkin_ws/src
 git clone https://github.com/mina-sadek/ROS-dev2.git
 
-mv ./ROS-dev2/ros_catkin_ws/ros_001 ./ros_001
+mv ./ROS-dev2/ros_001 ./ros_001
 sudo rm -r ./ROS-dev2
 
 # Rebuild the python scripts
